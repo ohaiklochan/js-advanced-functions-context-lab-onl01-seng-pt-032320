@@ -37,3 +37,12 @@ let createEmployeeRecords = function (array){
     let newarray = array.map(x => createEmployeeRecord(x))
     return newarray
 }
+
+let createTimeInEvent = function (dateStamp){
+    this.timeInEvents.push({
+      type: "TimeIn",
+      hour: parseInt(dateStamp.split(" ")[1]),
+      date: dateStamp.split(" ")[0]
+    })
+    return this
+}
