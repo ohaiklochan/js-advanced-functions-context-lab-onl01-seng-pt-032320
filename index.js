@@ -21,3 +21,14 @@ let allWagesFor = function () {
     return payable
 }
 
+let createEmployeeRecord = function ([firstName, familyName, title, payRate]) {
+    let x = {
+      firstName: firstName,
+      familyName: familyName,
+      title: title,
+      payPerHour: payRate,
+      timeInEvents: [],
+      timeOutEvents: []
+    }
+    return x 
+}
