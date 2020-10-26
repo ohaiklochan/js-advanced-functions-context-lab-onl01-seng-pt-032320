@@ -65,3 +65,13 @@ let hoursWorkedOnDate = function (date) {
 let wagesEarnedOnDate = function (date) {
   return hoursWorkedOnDate.call(this, date) * this.payPerHour
 }
+
+let findEmployeeByFirstName = function (srcArray, firstName) {
+  return srcArray.find( x => x.firstName === firstName)
+}
+
+let calculatePayroll = function (array) {
+  return array.reduce(function (memo, rec){
+      return memo + allWagesFor.call(rec)
+  }, 0)
+} 
