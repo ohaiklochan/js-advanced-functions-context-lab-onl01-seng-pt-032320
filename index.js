@@ -33,3 +33,7 @@ let createEmployeeRecord = function ([firstName, familyName, title, payRate]) {
     return x 
 }
 
+let createEmployeeRecords = function (array){
+    let newarray = array.map(x => createEmployeeRecord(x))
+    return newarray
+}
