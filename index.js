@@ -61,3 +61,7 @@ let hoursWorkedOnDate = function (date) {
   let inTime = this.timeInEvents.find( x => x.date === date).hour
   return (outTime - inTime)/100
 }
+
+let wagesEarnedOnDate = function (date) {
+  return hoursWorkedOnDate.call(this, date) * this.payPerHour
+}
